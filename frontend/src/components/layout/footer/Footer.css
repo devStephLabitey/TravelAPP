@@ -1,0 +1,22 @@
+.footer{
+   color: black;
+   width: 100%;
+}
+.iconLinks{
+   display: flex;
+   align-items: center;
+   justify-content: Center;
+}
+.iconLinks img{
+   height: 10vh;
+   margin-top: 80vh;
+   margin-bottom: 5vh;
+   padding: 0vh 2vh;
+}
+.terms {
+   display: flex;
+   align-items: center;
+   padding: 8vh;
+   justify-content: space-between;
+}
+

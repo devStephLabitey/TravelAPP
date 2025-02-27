@@ -1,0 +1,200 @@
+:root{
+    --white: #fff;
+    --white1: #f5f5f5;
+    --transparent1: #00000045;
+    --black0: #000;
+    --orange1: #fca311;
+    --blue1: #96ddea;
+    --blue2: #90e0ef;
+    --brown: #78290f;
+}
+.Register{
+    background: url(../../../assets/images/Serene.jpg) no-repeat left/cover;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15vh;
+    height: 85vh;
+}
+.Register .sideOne,.sideTwo{
+    width: 50%;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+}
+.Register .sideOne .sideOneContent{
+    padding-top: 5vh;
+}
+.Register .sideOne .sideOneContent .titre{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 4em;
+    color: white;
+}
+.Register .sideOne .sideOneContent .sous_titre{
+    margin-top: 2vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-size: 1.2em;
+}
+.Register .sideOne .sideOneContent .links{
+    margin-top: 4vh;
+
+}
+.lien{
+    text-decoration: none;
+    color: var(--orange1);
+}
+
+
+.Register .sideTwo{
+    height: 100%;
+}
+.Register .sideTwo .sectionTwoContent{
+    background: var(--white1);
+    height: 70%;
+    width: 60%;
+    border-radius: 3vh;
+    margin-top: 2vh;
+    padding: 2vh 4vh;
+} 
+.Register .sideTwo .sectionTwoContent form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+.Register .sideTwo .sectionTwoContent form .title{
+    font-size: 1.5em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.dual{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.dual div{
+    width: 100%;
+}
+.dual div input{
+    width: 90%;
+}
+input{
+    height: 8vh;
+    width: 95%;
+    background: var(--transparent1);
+    border: none;
+    border-radius: 3vh;
+    padding-left: 2vh;
+}
+.inputDiv{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+}
+.submitBtn button{
+    width: 25vh; 
+    padding: 2vh;
+    color: var(--white);
+    background: var(--orange1);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: none;
+    border-radius: 3vh;
+    cursor: pointer;
+}
+.error{
+    color: red;
+}
+
+
+.popup-overlay{
+width: 100%;
+background-color: rgba(20, 19, 19, 0.176);
+backdrop-filter: blur(2px);
+position: absolute;
+top: 155vh;
+display: flex;
+align-items: center;
+height: 140vh;
+justify-content: center;
+}
+.popup-overlay .popup-content{
+    background: var(--white1);
+    width: 60%;
+    height: 36%;
+    border-radius: 2vh;
+    position: relative;
+    padding:  4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.popup-overlay .popup-content .close-btn{
+    font-size: 35px;
+    color: var(--orange1);
+    position: absolute;
+    right: 1vh;
+    top: -1vh;
+    cursor: pointer;
+}
+.popup-overlay .popup-content .info{
+    display: flex;
+    gap: 2vh;
+    margin-top: 2vh;
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
+}
+.popup-overlay .popup-content .info img{
+    height: 20vh;
+    width: 40vh;
+    object-fit: cover;
+    border-radius: 1vh;
+}
+.popup-overlay .popup-content form{
+    display: flex;
+    padding-top: 4vh;
+    gap: 2vh;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+.popup-overlay .popup-content form input{
+    width: 35vh;
+    border-radius: 2vh;
+    padding: 0vh 2vh;
+}
+.popup-overlay .popup-content form .reservBtn{
+    width: 15%;
+}
+.popup-overlay .popup-content form .reservBtn button{
+    padding: 2vh;
+    width: 100%;
+    color: var(--white);
+    background: var(--orange1);
+    border: none;
+    border-radius: 2vh;
+    height: 8vh;
+}
+.total {
+    font-size: 2.1em;
+    color: var(--orange1);
+}
+.carLink{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vh;
+}
+.carLink div{
+    background: rgb(51, 189, 51);
+    padding: 2vh;
+    margin-right: 3vh;
+    border-radius: 2vh;
+}
+.carLink div .car-button{
+    color: var(--white);
+    text-decoration: none;
+    padding: 2vh;
+}
