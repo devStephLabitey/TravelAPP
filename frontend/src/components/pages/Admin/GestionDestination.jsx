@@ -16,7 +16,7 @@ function GestionDestination() {
   // Charger les destinations existantes depuis l'API
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/destinations")
+      .get("http://localhost:5001/api/destinations")
       .then((response) => setDestinations(response.data))
       .catch((error) => console.error("Erreur lors du chargement des destinations :", error));
   }, []);
@@ -36,7 +36,7 @@ function GestionDestination() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/destinations", formData);
+      const response = await axios.post("http://localhost:5001/api/destinations", formData);
       console.log("Destination ajoutée :", response.data);
 
       setDestinations([...destinations, response.data]); // Ajouter à la liste
@@ -51,7 +51,7 @@ function GestionDestination() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/destinations")
+      .get("http://localhost:5001/api/destinations")
       .then((response) => {
         console.log("Données API :", response.data);
         setDestinations(response.data);
