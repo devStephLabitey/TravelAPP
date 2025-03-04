@@ -9,6 +9,7 @@ import VoituresDisponibles from "./components/pages/voiture/VoituresDisponibles"
 import DashBoard from "./components/pages/Admin/DashBoard";
 import GestionLogement from "./components/pages/Admin/GestionLogement";
 import GestionDestination from "./components/pages/Admin/GestionDestination";
+import GestionUser from "./components/pages/Admin/GestionUser";
 function App() {
   return (
     <Router>
@@ -69,6 +70,7 @@ function App() {
         <Route path="/admin/dashboard" element={<DashBoard />} />
         <Route path="/admin/GestionLogement" element={<GestionLogement />} />
         <Route path="/admin/GestionDestination" element={<GestionDestination />} />
+        <Route path="/admin/GestionUser" element={<GestionUser />} />
 
       </Routes>
     </Router>

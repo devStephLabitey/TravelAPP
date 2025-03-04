@@ -44,8 +44,8 @@ function Sidebar() {
 
           <li>
             <Link
-              to="/admin/utilisateurs"
-              className={`liens ${location.pathname === "/admin/utilisateurs" ? "active" : ""}`}
+              to="/admin/GestionUser"
+              className={`liens ${location.pathname === "/admin/GestionUser" ? "active" : ""}`}
             >
               Utilisateurs
             </Link>
