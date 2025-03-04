@@ -11,7 +11,7 @@ const destinationController = require("../controllers/destinationController");
 
 /**
  * @swagger
- * /destinations:
+ * api/destinations:
  *   get:
  *     summary: Récupérer toutes les destinations
  *     tags: [Destination]
@@ -25,7 +25,7 @@ router.get("/", destinationController.getAllDestinations);
 
 /**
  * @swagger
- * /destinations/{id}:
+ * api/destinations/{id}:
  *   get:
  *     summary: Récupérer une destination par ID
  *     tags: [Destination]
@@ -48,7 +48,7 @@ router.get("/:id", destinationController.getDestinationById);
 
 /**
  * @swagger
- * /destinations:
+ * api/destinations:
  *   post:
  *     summary: Créer une nouvelle destination
  *     tags: [Destination]
@@ -77,7 +77,7 @@ router.post("/", destinationController.createDestination);
 
 /**
  * @swagger
- * /destinations/{id}:
+ *api /destinations/{id}:
  *   put:
  *     summary: Mettre à jour une destination
  *     tags: [Destination]
@@ -115,7 +115,7 @@ router.put("/:id", destinationController.updateDestination);
 
 /**
  * @swagger
- * /destinations/{id}:
+ *api /destinations/{id}:
  *   delete:
  *     summary: Supprimer une destination
  *     tags: [Destination]

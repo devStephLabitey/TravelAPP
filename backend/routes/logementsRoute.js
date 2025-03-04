@@ -11,7 +11,7 @@ const logementController = require("../controllers/logementController");
 
 /**
  * @swagger
- * /logements:
+ * api/logements:
  *   get:
  *     summary: Récupérer tous les logements
  *     tags: [Logement]
@@ -25,7 +25,7 @@ router.get("/", logementController.getAllLogements);
 
 /**
  * @swagger
- * /logements/{id}:
+ *api /logements/{id}:
  *   get:
  *     summary: Récupérer un logement par ID
  *     tags: [Logement]
@@ -48,7 +48,7 @@ router.get("/:id", logementController.getLogementById);
 
 /**
  * @swagger
- * /logements:
+ * api/logements:
  *   post:
  *     summary: Ajouter un nouveau logement
  *     tags: [Logement]
@@ -77,7 +77,7 @@ router.post("/", logementController.createLogement);
 
 /**
  * @swagger
- * /logements/{id}:
+ * api/logements/{id}:
  *   put:
  *     summary: Mettre à jour un logement
  *     tags: [Logement]
@@ -115,7 +115,7 @@ router.put("/:id", logementController.updateLogement);
 
 /**
  * @swagger
- * /logements/{id}:
+ * api/logements/{id}:
  *   delete:
  *     summary: Supprimer un logement
  *     tags: [Logement]

@@ -11,7 +11,7 @@ const reservationController = require("../controllers/reservationController");
 
 /**
  * @swagger
- * /reservations:
+ * api/reservations:
  *   get:
  *     summary: Récupérer toutes les réservations
  *     tags: [Réservation]
@@ -25,7 +25,7 @@ router.get('/', reservationController.getAllReservations);
 
 /**
  * @swagger
- * /reservations/{id}:
+ * api/reservations/{id}:
  *   get:
  *     summary: Récupérer une réservation par ID
  *     tags: [Réservation]
@@ -48,7 +48,7 @@ router.get("/:id", reservationController.getReservationById);
 
 /**
  * @swagger
- * /reservations:
+ * api/reservations:
  *   post:
  *     summary: Créer une nouvelle réservation
  *     tags: [Réservation]
@@ -81,7 +81,7 @@ router.post("/", reservationController.createReservation);
 
 /**
  * @swagger
- * /reservations/{id}:
+ * api/reservations/{id}:
  *   put:
  *     summary: Mettre à jour une réservation
  *     tags: [Réservation]
@@ -119,7 +119,7 @@ router.put("/:id", reservationController.updateReservation);
 
 /**
  * @swagger
- * /reservations/{id}:
+ * api/reservations/{id}:
  *   delete:
  *     summary: Supprimer une réservation
  *     tags: [Réservation]

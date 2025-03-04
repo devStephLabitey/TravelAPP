@@ -3,6 +3,8 @@ const db = require('./config/db');
 const cors = require("cors");
 const fs = require('fs');
 const path = require('path');
+require("dotenv").config();
+
 
 const { swaggerUi, swaggerDocs } = require("./config/swagger");
 

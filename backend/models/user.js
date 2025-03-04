@@ -36,17 +36,6 @@ const User = sequelize.define('User', {
 }, {
   tableName: 'users',
   timestamps: false,
-  hooks: {
-    // Hachage du mot de passe
-    beforeCreate: async (user) => {
-      user.pass_word = await argon2.hash(user.pass_word);
-    },
-    beforeUpdate: async (user) => {
-      if (user.changed('pass_word')) {
-        user.pass_word = await argon2.hash(user.pass_word);
-      }
-    }
-  }
 });
 
 module.exports = User;

@@ -11,7 +11,7 @@ const paiementController = require("../controllers/paiementController");
 
 /**
  * @swagger
- * /paiements:
+ * api/paiements:
  *   get:
  *     summary: Récupérer tous les paiements
  *     tags: [Paiement]
@@ -25,7 +25,7 @@ router.get('/', paiementController.getAllPaiements);
 
 /**
  * @swagger
- * /paiements/{id}:
+ * api/paiements/{id}:
  *   get:
  *     summary: Récupérer un paiement par ID
  *     tags: [Paiement]
@@ -48,7 +48,7 @@ router.get("/:id", paiementController.getPaiementById);
 
 /**
  * @swagger
- * /paiements:
+ * api/paiements:
  *   post:
  *     summary: Effectuer un paiement
  *     tags: [Paiement]
@@ -77,7 +77,7 @@ router.post("/", paiementController.createPaiement);
 
 /**
  * @swagger
- * /paiements/{id}:
+ * api/paiements/{id}:
  *   put:
  *     summary: Mettre à jour un paiement
  *     tags: [Paiement]
@@ -113,7 +113,7 @@ router.put("/:id", paiementController.updatePaiement);
 
 /**
  * @swagger
- * /paiements/{id}:
+ * api/paiements/{id}:
  *   delete:
  *     summary: Supprimer un paiement
  *     tags: [Paiement]

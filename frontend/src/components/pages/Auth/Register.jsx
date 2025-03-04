@@ -1,49 +1,56 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Navbar from "../../layout/navbar/navbar";
+import axios from "axios";
 import "./Auth.css";
 
 function Register() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    lastname: "",
-    firstname: "",
+    nom_user: "",
+    prenom_user: "",
     email: "",
-    password: "",
+    pass_word: "",
   });
 
   const [errors, setErrors] = useState({});
+  const [apiError, setApiError] = useState("");
 
-  // Fonction pour mettre à jour les valeurs du formulaire
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Vérification des champs avant soumission
   const validateForm = () => {
     let errors = {};
-    if (!formData.lastname.trim()) errors.lastname = "Le nom est requis";
-    if (!formData.firstname.trim()) errors.firstname = "Le prénom est requis";
+    if (!formData.nom_user.trim()) errors.nom_user = "Le nom est requis";
+    if (!formData.prenom_user.trim()) errors.prenom_user = "Le prénom est requis";
     if (!formData.email.trim()) {
       errors.email = "L'email est requis";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       errors.email = "L'email n'est pas valide";
     }
-    if (!formData.password.trim()) {
-      errors.password = "Le mot de passe est requis";
-    } else if (formData.password.length < 6) {
-      errors.password = "Le mot de passe doit contenir au moins 6 caractères";
+    if (!formData.pass_word.trim()) {
+      errors.pass_word = "Le mot de passe est requis";
+    } else if (formData.pass_word.length < 6) {
+      errors.pass_word = "Le mot de passe doit contenir au moins 6 caractères";
     }
 
     setErrors(errors);
     return Object.keys(errors).length === 0;
   };
 
-  // Soumission du formulaire
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      console.log("Formulaire valide :", formData);
-      // Tu peux envoyer les données ici (ex: API)
+    if (!validateForm()) return;
+
+    try {
+      const response = await axios.post("http://localhost:5001/api/auths/signup", formData);
+      console.log("Inscription réussie :", response.data);
+
+      // Redirection vers la page de connexion après l'inscription
+      navigate("/login");
+    } catch (error) {
+      console.error("Erreur API :", error);
+      setApiError(error.response?.data?.message || "Échec de l'inscription");
     }
   };
 
@@ -79,27 +86,29 @@ function Register() {
           <form id="formControl" onSubmit={handleSubmit}>
             <div className="title">Créer un Compte</div>
 
+            {apiError && <p className="error">{apiError}</p>}
+
             <div className="dual">
               <div>
                 <input
                   type="text"
-                  name="lastname"
+                  name="nom_user"
                   placeholder="Nom"
-                  value={formData.lastname}
+                  value={formData.nom_user}
                   onChange={handleChange}
                 />
-                {errors.lastname && <p className="error">{errors.lastname}</p>}
+                {errors.nom_user && <p className="error">{errors.nom_user}</p>}
               </div>
 
-              <div >
+              <div>
                 <input
                   type="text"
-                  name="firstname"
+                  name="prenom_user"
                   placeholder="Prénom(s)"
-                  value={formData.firstname}
+                  value={formData.prenom_user}
                   onChange={handleChange}
                 />
-                {errors.firstname && <p className="error">{errors.firstname}</p>}
+                {errors.prenom_user && <p className="error">{errors.prenom_user}</p>}
               </div>
             </div>
 
@@ -117,12 +126,12 @@ function Register() {
             <div className="inputDiv">
               <input
                 type="password"
-                name="password"
+                name="pass_word"
                 placeholder="Mot de passe"
-                value={formData.password}
+                value={formData.pass_word}
                 onChange={handleChange}
               />
-              {errors.password && <p className="error">{errors.password}</p>}
+              {errors.pass_word && <p className="error">{errors.pass_word}</p>}
             </div>
 
             <div className="submitBtn">

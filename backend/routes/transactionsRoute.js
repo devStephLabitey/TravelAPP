@@ -11,7 +11,7 @@ const transactionController = require("../controllers/transactionController");
 
 /**
  * @swagger
- * /transactions:
+ * api/transactions:
  *   get:
  *     summary: Récupérer toutes les transactions
  *     tags: [Transactions]
@@ -25,7 +25,7 @@ router.get('/', transactionController.getAllTransactions);
 
 /**
  * @swagger
- * /transactions/{id}:
+ * api/transactions/{id}:
  *   get:
  *     summary: Récupérer une transaction par ID
  *     tags: [Transactions]
@@ -48,7 +48,7 @@ router.get("/:id", transactionController.getTransactionById);
 
 /**
  * @swagger
- * /transactions:
+ *api /transactions:
  *   post:
  *     summary: Créer une nouvelle transaction
  *     tags: [Transactions]
@@ -79,7 +79,7 @@ router.post("/", transactionController.createTransaction);
 
 /**
  * @swagger
- * /transactions/{id}:
+ * api/transactions/{id}:
  *   put:
  *     summary: Mettre à jour une transaction
  *     tags: [Transactions]
@@ -113,7 +113,7 @@ router.put("/:id", transactionController.updateTransaction);
 
 /**
  * @swagger
- * /transactions/{id}:
+ * api/transactions/{id}:
  *   delete:
  *     summary: Supprimer une transaction
  *     tags: [Transactions]

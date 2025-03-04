@@ -11,7 +11,7 @@ const moyenPaiementController = require("../controllers/moyenPaiementController"
 
 /**
  * @swagger
- * /moyens-paiement:
+ * api/moyens-paiement:
  *   get:
  *     summary: Récupérer tous les moyens de paiement
  *     tags: [MoyenPaiement]
@@ -25,7 +25,7 @@ router.get('/', moyenPaiementController.getAllMoyensPaiement);
 
 /**
  * @swagger
- * /moyens-paiement/{id}:
+ * api/moyens-paiement/{id}:
  *   get:
  *     summary: Récupérer un moyen de paiement par ID
  *     tags: [MoyenPaiement]
@@ -48,7 +48,7 @@ router.get("/:id", moyenPaiementController.getMoyenPaiementById);
 
 /**
  * @swagger
- * /moyens-paiement:
+ * api/moyens-paiement:
  *   post:
  *     summary: Ajouter un nouveau moyen de paiement
  *     tags: [MoyenPaiement]
@@ -75,7 +75,7 @@ router.post("/", moyenPaiementController.createMoyenPaiement);
 
 /**
  * @swagger
- * /moyens-paiement/{id}:
+ * api/moyens-paiement/{id}:
  *   put:
  *     summary: Mettre à jour un moyen de paiement
  *     tags: [MoyenPaiement]
@@ -111,7 +111,7 @@ router.put("/:id", moyenPaiementController.updateMoyenPaiement);
 
 /**
  * @swagger
- * /moyens-paiement/{id}:
+ *api /moyens-paiement/{id}:
  *   delete:
  *     summary: Supprimer un moyen de paiement
  *     tags: [MoyenPaiement]

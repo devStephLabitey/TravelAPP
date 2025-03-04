@@ -11,7 +11,7 @@ const compteUtilisateurController = require('../controllers/compteUtilisateurCon
 
 /**
  * @swagger
- * /compte-utilisateur:
+ * api/compte-utilisateurs:
  *   post:
  *     summary: Créer un nouveau compte utilisateur
  *     tags: [CompteUtilisateur]
@@ -44,7 +44,7 @@ router.post('/', compteUtilisateurController.createCompteUtilisateur);
 
 /**
  * @swagger
- * /compte-utilisateur/{id}:
+ * api/compte-utilisateurs/{id}:
  *   get:
  *     summary: Récupérer un compte utilisateur par ID
  *     tags: [CompteUtilisateur]
@@ -67,7 +67,7 @@ router.get('/:id', compteUtilisateurController.getCompteUtilisateur);
 
 /**
  * @swagger
- * /compte-utilisateur/{id}:
+ * api/compte-utilisateurs/{id}:
  *   put:
  *     summary: Mettre à jour un compte utilisateur
  *     tags: [CompteUtilisateur]
@@ -109,7 +109,7 @@ router.put('/:id', compteUtilisateurController.updateCompteUtilisateur);
 
 /**
  * @swagger
- * /compte-utilisateur/{id}:
+ * api/compte-utilisateurs/{id}:
  *   delete:
  *     summary: Supprimer un compte utilisateur
  *     tags: [CompteUtilisateur]

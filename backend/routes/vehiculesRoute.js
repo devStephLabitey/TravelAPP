@@ -11,7 +11,7 @@ const vehiculeController = require("../controllers/vehiculeController");
 
 /**
  * @swagger
- * /vehicules:
+ * api/vehicules:
  *   get:
  *     summary: Récupérer tous les véhicules
  *     tags: [Véhicules]
@@ -25,7 +25,7 @@ router.get('/', vehiculeController.getAllVehicules);
 
 /**
  * @swagger
- * /vehicules/{id}:
+ * api/vehicules/{id}:
  *   get:
  *     summary: Récupérer un véhicule par ID
  *     tags: [Véhicules]
@@ -48,7 +48,7 @@ router.get("/:id", vehiculeController.getVehiculeById);
 
 /**
  * @swagger
- * /vehicules:
+ * api/vehicules:
  *   post:
  *     summary: Ajouter un nouveau véhicule
  *     tags: [Véhicules]
@@ -79,7 +79,7 @@ router.post("/", vehiculeController.createVehicule);
 
 /**
  * @swagger
- * /vehicules/{id}:
+ * api/vehicules/{id}:
  *   put:
  *     summary: Mettre à jour un véhicule
  *     tags: [Véhicules]
@@ -119,7 +119,7 @@ router.put("/:id", vehiculeController.updateVehicule);
 
 /**
  * @swagger
- * /vehicules/{id}:
+ * api/vehicules/{id}:
  *   delete:
  *     summary: Supprimer un véhicule
  *     tags: [Véhicules]
