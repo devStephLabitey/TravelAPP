@@ -2,7 +2,16 @@ const express = require('express');
 const db = require('./config/db');
 const app = express();
 const cors = require("cors");
-const PORT = 5000;
+
+const { swaggerUi, swaggerDocs } = require("./config/swagger");
+
+
+const PORT = 5001;
+
+
+// Documentation Swagger accessible sur `/api-docs`
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+
 
 // Middlewares
 app.use(express.json());
@@ -45,6 +54,10 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ message: 'Une erreur est survenue', error: err.message });
 });
+
+
+
+
 
 // Démarrer le serveur
 app.listen(PORT, () => {
