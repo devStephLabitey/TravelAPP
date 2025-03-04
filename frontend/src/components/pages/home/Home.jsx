@@ -137,7 +137,7 @@ function Home() {
                         
                         <div className="carLink">
                             <p className="total"><strong>Total :</strong> {selectedLogement.price * (debut && fin ? 1 : 0)} $</p>
-                            <div><Link to="/voitures-disponibles" className="car-button"><span><i className='fi fi-rr-car'></i></span> Voiture disponible</Link></div>
+                            <div><Link to="/VoituresDisponibles" className="car-button"><span><i className='fi fi-rr-car'></i></span> Voiture disponible</Link></div>
                         </div>
                     </div>
                 </div>

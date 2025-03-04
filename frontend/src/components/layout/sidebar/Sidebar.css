@@ -1,0 +1,31 @@
+.SideBar{
+    width: 100%;
+}
+.sideContent{
+    background: var(--white1);
+    height: 98vh;
+    width: 100%;
+    padding-top: 8vh;
+}
+.sideContent .Links{
+    display: flex;
+    flex-direction: column;
+    gap: 8vh;
+    width: 100%;
+}
+.sideContent .Links li{
+    list-style: none;
+}
+.sideContent .Links li .liens{
+    text-decoration: none;
+    color: var(--orange1);
+    width: 30vh;
+}
+.sideContent .Links li img{
+    height: 10vh;
+}
+.active{
+    background: var(--white);
+    padding: 1vh 2vh;
+
+}
